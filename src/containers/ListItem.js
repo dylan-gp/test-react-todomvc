@@ -11,6 +11,11 @@ export default class Component extends React.Component {
     this.setState({item: this.props.item});
   }
 
+  componentDidUpdate() {
+    if (!this.props.anyComplete && this.state.item.complete)
+      this.props.setComplete();
+  }
+
   markComplete = () =>
     this.setState(prev => {
       prev.item.complete = true;

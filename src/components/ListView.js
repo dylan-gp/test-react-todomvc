@@ -1,19 +1,45 @@
 import React from 'react';
 import ListItem from '../containers/ListItem';
 
-export default ({items, deleteItem}) => (
+export default (props) => (
   <ul className='list-container'>
-    {items.map(
+    {props.items.map(
       item =>
-        <ListItem key={item.id} item={item} deleteItem={deleteItem}/>
+        <ListItem
+          key={item.id}
+          item={item}
+          deleteItem={props.deleteItem}
+          setComplete={props.setComplete}
+          anyComplete={props.anyComplete}
+        />
     )}
-    <ListCount items={items}/>
+    <LastListItem
+      items={props.items}
+      clearCompleted={props.clearCompleted}
+      markAllComplete={props.markAllComplete}
+      anyComplete={props.anyComplete}
+    />
   </ul>
 );
 
+const LastListItem = ({markAllComplete, items, clearCompleted, anyComplete}) => (
+    <li className="list-item-count">
+      <BottomOfListClickText feature={markAllComplete} featureName="all completed" />
+      {
+        anyComplete ?
+          <BottomOfListClickText feature={clearCompleted} featureName="clear completed" /> :
+          null
+      }
+      <ListCount items={items} />
+    </li>
+);
+
+const BottomOfListClickText = ({feature, featureName}) =>
+  <p className="list-feature" onClick={feature}>{featureName}</p>;
+
+
 const ListCount = ({items}) => 
-  <li className="list-item-count">
-    <label>
-      {`${items.length} item${items.length > 1 ? 's' : ''}`}
-    </label>
-  </li>;
+  <p>
+    <strong>{items.length}</strong>
+    {` item${items.length > 1 ? 's' : ''}`}
+  </p>;

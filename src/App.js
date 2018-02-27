@@ -11,11 +11,13 @@ class App extends Component {
   state = {
     items: []
   }
+
   addItem = item =>
     this.setState(
       prev => 
         ({items: [...prev.items, item]})
     );
+
   deleteItem =
     id =>
       () => // this is where the Event would be taken in but we dont need it 
@@ -29,6 +31,27 @@ class App extends Component {
             })
         );
 
+  markAllComplete = () =>
+    this.setState(
+      prev => {
+        prev.items.forEach(
+          item =>
+            item.complete = true
+        )
+        return prev;
+      }
+    );
+
+  clearCompleted = () =>
+    this.setState(
+      prev =>
+        ({
+          items: prev.items.filter(
+            item =>
+              !item.complete
+          )
+        })
+    );
   render() {
     return (
       <React.Fragment>
@@ -41,9 +64,11 @@ class App extends Component {
         {this.state.items.length ?
           <ToDoList 
             items={this.state.items}
+            markAllComplete={this.markAllComplete}
+            clearCompleted={this.clearCompleted}
             deleteItem={this.deleteItem}  // have to pass through multiple layers of components(maybe think about redux)
           /> : null
-        } 
+        }
       </React.Fragment>
     );
   }
