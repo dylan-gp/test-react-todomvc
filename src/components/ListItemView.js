@@ -9,7 +9,7 @@ export default (props) => (
         showBtn={true}
         inputID="input-inside-container"
         passUpRef={props.passUpRef}
-        submitHandler={props.changeItemText}
+        submitHandler={props.changeItemSubmit}
         inputValue={props.item.name}
       /> :
       <ListItemStandard
@@ -27,7 +27,7 @@ const ListItemStandard = (props) => (
   <React.Fragment>
     <label onDoubleClick={props.dblClickHandler}>{props.item.name}</label>
     {!props.item.complete ? 
-      <button onClick={props.markComplete}>√</button> :
+      <button onClick={props.markComplete(props.item.id)}>√</button> :
       null
     }
     <button onClick={props.deleteItem(props.item.id)}>X</button>
