@@ -25,10 +25,10 @@ const Routes = (props) => {
 
   const cbRender = items => 
     items.length ?
-    <ToDoList
-      items={items}
-      {...props}
- /> : null;
+      <ToDoList
+        {...props}
+        items={items} // must be last or ...props will overwrite
+      /> : null;
 
   return (
     <React.Fragment>
