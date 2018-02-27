@@ -20,10 +20,16 @@ export default (props) => (
 
 const LastListItem = ({markAllComplete, items, clearCompleted, getAnyComplete}) => (
     <li className="list-item-count">
-      <BottomOfListClickText feature={markAllComplete} featureName="all completed" />
+      <BottomOfListClickText
+        feature={markAllComplete}
+        featureName="all completed"
+      />
       {
         getAnyComplete() ?
-          <BottomOfListClickText feature={clearCompleted} featureName="clear completed" /> :
+          <BottomOfListClickText
+            feature={clearCompleted}
+            featureName="clear completed"
+          /> :
           null
       }
       <ListCount items={items} />

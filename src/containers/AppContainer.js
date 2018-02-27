@@ -8,12 +8,14 @@ export default class AppContainer extends React.Component {
   state = {
     items: []
   }
+
   componentDidMount() {
     this.setState(loadState);
   }
   componentDidUpdate() {
     saveState(this.state); // think about how to deal with those that are individually completed
   }
+
   addItem = item =>
     this.setState(
       prev => 

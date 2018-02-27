@@ -1,5 +1,5 @@
 import React from 'react';
-import TitleBar from './TitleBar';
+import TitleBarView from './TitleBarView';
 import InputBar from '../containers/InputBar';
 import ToDoList from '../containers/ToDoList';
 import { Route } from 'react-router-dom';
@@ -7,7 +7,7 @@ import { Route } from 'react-router-dom';
 
 export default (props) => (
   <React.Fragment>
-    <TitleBar 
+    <TitleBarView
       title='To-Do'
     />
     <InputBar
