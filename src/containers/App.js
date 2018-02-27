@@ -4,7 +4,7 @@ import { loadState, saveState } from '../utils/localStorage';
 import '../styles/App.css';
 
 
-export default class AppContainer extends React.Component {
+export default class App extends React.Component {
   state = {
     items: []
   }
