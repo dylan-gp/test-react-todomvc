@@ -3,6 +3,9 @@
   height: 40px;
   border: solid 2px black;
   margin-bottom: 40px; }
+  @media (max-width: 1000px) {
+    .titlebar-container {
+      width: 80vw; } }
 
 .titlebar-title {
   font-size: 26px;

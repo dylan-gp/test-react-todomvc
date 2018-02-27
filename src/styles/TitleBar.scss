@@ -5,6 +5,9 @@
   height: 40px;
   border: solid 2px black;
   margin-bottom: 40px;
+  @media(max-width: $max-width) {
+    width: $small-app-width;
+  }
 }
 .titlebar-title {
   font-size: $font-size;
