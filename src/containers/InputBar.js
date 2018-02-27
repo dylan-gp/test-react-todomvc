@@ -21,6 +21,7 @@ export default class InputBar extends React.Component {
   render = () => 
     <InputBarView
       passUpRef={this.passUpRef}
-      addItem={this.addItem}
+      submitHandler={this.addItem}
+      showbtn={false}
     />;
 }

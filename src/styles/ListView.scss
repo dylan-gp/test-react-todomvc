@@ -16,9 +16,10 @@
   font-size: $font-size;
   display: flex;
   flex-direction: row;
+  overflow: hidden;
 }
 
-.list-item p {
+.list-item label {
   margin: 0;
   padding-left: 10px;
   width: 90%;

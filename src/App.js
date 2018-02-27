@@ -21,12 +21,12 @@ class App extends Component {
       () => // this is where the Event would be taken in but we dont need it 
         this.setState(
           prev =>
-          ({
-            items: prev.items.filter(
-              item =>
-                item.id !== id
-            )
-          })
+            ({
+              items: prev.items.filter(
+                item =>
+                  item.id !== id
+              )
+            })
         );
 
   render() {
