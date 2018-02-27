@@ -1,5 +1,7 @@
 import React from 'react';
 import ListItemView from '../components/ListItemView';
+import { loadState, saveState } from '../utils/localStorage';
+
 
 export default class Component extends React.Component {
   state = {
@@ -14,6 +16,16 @@ export default class Component extends React.Component {
   componentDidUpdate() {
     if (!this.props.anyComplete && this.state.item.complete)
       this.props.setComplete();
+    const loadedState = loadState();
+    const itemIndex = 
+      loadedState
+        .items
+        .findIndex(
+          stateItem =>
+            stateItem.id === this.state.item.id
+          );
+    loadedState.items[itemIndex] = this.state.item;
+    saveState(loadedState);
   }
 
   markComplete = () =>

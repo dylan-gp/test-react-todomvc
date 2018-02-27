@@ -4,6 +4,7 @@ import registerServiceWorker from './utils/registerServiceWorker';
 import TitleBar from './components/TitleBar';
 import InputBar from './containers/InputBar';
 import ToDoList from './containers/ToDoList';
+import { loadState, saveState } from './utils/localStorage';
 import './styles/App.css';
 
 
@@ -11,7 +12,12 @@ class App extends Component {
   state = {
     items: []
   }
-
+  componentDidMount() {
+    this.setState(loadState);
+  }
+  componentDidUpdate() {
+    saveState(this.state); // think about how to deal with those that are individually completed
+  }
   addItem = item =>
     this.setState(
       prev => 
