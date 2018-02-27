@@ -4,20 +4,15 @@
 
 ## Resources
 
-- [Website]()
-- [Documentation]()
-- [Used by]()
-- [Blog]()
-- [FAQ]()
+- [Website](https://to-do-mvc.herokuapp.com/)
 
 ### Articles
 
-- [Interesting article]()
+- [Adding Preprocessor to Create React App](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-a-css-preprocessor-sass-less-etc)
 
 ## Implementation
 
-The app was created using React and SCSS.  The src folder contains all of the source code.
-The styles were written in scss and broken down into css.
+The app was created using React and SCSS.  The src folder contains all of the source code. The styles were written in scss and broken down into css. The index.html was placed into the public folder because that's where react scripts expects it to be (This can be changed but becomes an issue if using create react app heroku buildback.)
 
 The layout is as follows
 
@@ -30,7 +25,7 @@ The layout is as follows
 * TitleBarView.js
 
 #### containers (contains component logic)
-* AppContainer.js (contains todo item state)
+* App.js (contains todo item state)
 * InputBar.js
 * ListItem.js
 * ToDoList.js
@@ -53,9 +48,30 @@ The layout is as follows
 * localStorage.js
 * registerServiceWorker.js
 
+#### index.js (where react scripts looks for dom render)
 
-How was the app created? Anything worth sharing about the process of creating the app? Any spec violations?
+## Features
 
+Lots of extra functionality was added from the commented out parts in the readme.
+
+Full list is as follows:
+
+* When no to dos, to do list container is hidden.
+* To dos can be added to list with input at top of app
+* Mark complete by clicking checkbox that shows on hover (completed items have a slight green background color)
+* Remove item by clicking X button that shows on hover
+* Edit list item in place by double clicking on item name
+* Item counter at bottom of container
+* Clear completed items at bottom of container when completed items are present
+* Mark all complete at bottom of container
+* Local storage persistence
+* Routing (/, /active, /completed)
+
+## Dev Steps
+* clone down repo
+* cd into repo
+* npm install
+* npm start
 ## Credit
 
-Created by [Your Name](user@noreplay.com)
+Created by [Dylan Scheitdt](https://dylansgrandportfolio.herokuapp.com/)
