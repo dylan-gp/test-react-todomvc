@@ -12,7 +12,7 @@
 
 ## Implementation
 
-The app was created using React and SCSS.  The src folder contains all of the source code. The styles were written in scss and broken down into css. The index.html was placed into the public folder because that's where react scripts expects it to be (This can be changed but becomes an issue if using create react app heroku buildback.)
+The app was created using React and SCSS.  The src folder contains all of the source code. The styles were written in scss and broken down into css. The index.html was placed into the public folder because that's where react scripts expects it to be (This can be changed but becomes an issue if using create react app heroku buildpack.)
 
 The layout is as follows
 

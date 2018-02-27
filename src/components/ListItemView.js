@@ -12,12 +12,7 @@ export default (props) => (
         submitHandler={props.changeItemSubmit}
         inputValue={props.item.name}
       /> :
-      <ListItemStandard
-        dblClickHandler={props.dblClickHandler}
-        item={props.item}
-        markComplete={props.markComplete}
-        deleteItem={props.deleteItem}
-      />
+      <ListItemStandard {...props} />
     }
   </li>
 );

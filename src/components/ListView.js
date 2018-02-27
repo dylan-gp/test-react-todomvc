@@ -11,10 +11,7 @@ export default (props) => (
           {...props}
         />
     )}
-    <LastListItem
-      items={props.items}
-      {...props}
-    />
+    <LastListItem {...props} />
   </ul>
 );
 
