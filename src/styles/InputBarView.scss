@@ -1,0 +1,20 @@
+@import 'Style.scss';
+
+input[type=submit], input[type=text] {
+  line-height: 40px;
+  font-size: $font-size;
+}
+input::placeholder {
+  text-align: center;
+}
+.input-input {
+  padding-left: $btn-size;
+  height: 40px;
+  width: $app-width;
+  font-size: $font-size;
+}
+.input-btn {
+  width: $btn-size;
+  height: $btn-size;
+  border: 2px solid #333;
+}

@@ -1,0 +1,41 @@
+@import 'Style.scss';
+
+.list-container {
+  width: $app-width;
+  margin:  40px auto;
+  border: 2px solid #555;
+  padding: 0;
+}
+.list-item {
+  width: 95%;
+  line-height: 40px;
+  list-style: none;
+  border: 2px solid #666;
+  margin: 20px auto;
+  height: 40px;
+  font-size: $font-size;
+  display: flex;
+  flex-direction: row;
+}
+
+.list-item p {
+  margin: 0;
+  padding-left: 10px;
+  width: 90%;
+}
+
+.list-item button {
+  width: 10%;
+  font-size: $font-size;
+  visibility: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+
+.list-item:hover button {
+  visibility: 1;
+  opacity: 1;
+  transition: opacity 1s;
+}

@@ -1,0 +1,17 @@
+input[type=submit], input[type=text] {
+  line-height: 40px;
+  font-size: 26px; }
+
+input::placeholder {
+  text-align: center; }
+
+.input-input {
+  padding-left: 46px;
+  height: 40px;
+  width: 40vw;
+  font-size: 26px; }
+
+.input-btn {
+  width: 46px;
+  height: 46px;
+  border: 2px solid #333; }

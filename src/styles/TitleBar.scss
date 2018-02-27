@@ -1,0 +1,15 @@
+@import 'Style.scss';
+
+.titlebar-container {
+  width: $app-width;
+  height: 40px;
+  border: solid 2px black;
+  margin-bottom: 40px;
+}
+.titlebar-title {
+  font-size: $font-size;
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}

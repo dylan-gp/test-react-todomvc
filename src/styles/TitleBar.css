@@ -1,0 +1,12 @@
+.titlebar-container {
+  width: 40vw;
+  height: 40px;
+  border: solid 2px black;
+  margin-bottom: 40px; }
+
+.titlebar-title {
+  font-size: 26px;
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
+  text-align: center; }
