@@ -1,12 +1,18 @@
 import React from 'react';
 
-export default (props) => (
-  <form className='input-form' onSubmit={props.addItem}>
+export default ({submitHandler, passUpRef, showBtn, inputID, inputValue}) => (
+  <form
+    className='input-form'
+    onSubmit={submitHandler}
+  >
     <input
+      id={inputID}
       className='input-input'
-      placeholder='Add Item..'
-      ref={props.passUpRef}
+      placeholder={showBtn ? '' : 'Add Item..'}
+      autoFocus={true}
+      ref={passUpRef}
+      defaultValue={inputValue}
     />
-    <input type='submit' className='input-btn' value='+' />
+    {!showBtn ? <input type='submit' className='input-btn' value='+' /> : null}
   </form>
 );

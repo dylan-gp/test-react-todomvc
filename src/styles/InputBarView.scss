@@ -8,7 +8,7 @@ input::placeholder {
   text-align: center;
 }
 .input-input {
-  padding-left: $btn-size;
+  // padding-left: $btn-size;
   height: 40px;
   width: $app-width;
   font-size: $font-size;
@@ -17,7 +17,26 @@ input::placeholder {
   }
 }
 .input-btn {
+  position: absolute;
+  right: 0;
   width: $btn-size;
   height: $btn-size;
   border: 2px solid #333;
+  cursor: pointer;
+}
+#input-inside-container {
+  height: 100%;
+  width: 100%;
+  font-size: $font-size;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  background-color: inherit;
+}
+.input-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
