@@ -41,7 +41,7 @@ const BottomOfListClickText = ({feature, featureName}) =>
 
 
 const ListCount = ({items}) => 
-  <p>
+  <p className="list-feature">
     <strong>{items.length}</strong>
     {` item${items.length > 1 ? 's' : ''}`}
   </p>;

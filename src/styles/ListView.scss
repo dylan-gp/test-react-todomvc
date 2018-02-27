@@ -5,6 +5,9 @@
   margin:  40px auto;
   border: 2px solid #555;
   padding: 0;
+  @media(max-width: $max-width) {
+    width: $small-app-width;
+  }
 }
 .list-item {
   width: 95%;
@@ -49,6 +52,16 @@
   font-size: 20px;
   color: #777;
   list-style: none;
+  @media(max-width: $max-phone-width) {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+}
+.list-feature {
+  @media(max-width: $max-phone-width) {
+    margin: 4px auto;
+  }
 }
 .list-feature:hover {
  cursor: pointer;

@@ -3,6 +3,9 @@
   margin: 40px auto;
   border: 2px solid #555;
   padding: 0; }
+  @media (max-width: 1000px) {
+    .list-container {
+      width: 80vw; } }
 
 .list-item {
   width: 95%;
@@ -46,6 +49,15 @@
   font-size: 20px;
   color: #777;
   list-style: none; }
+  @media (max-width: 600px) {
+    .list-item-count {
+      flex-direction: column;
+      align-items: center;
+      margin: 0; } }
+
+@media (max-width: 600px) {
+  .list-feature {
+    margin: 4px auto; } }
 
 .list-feature:hover {
   cursor: pointer;

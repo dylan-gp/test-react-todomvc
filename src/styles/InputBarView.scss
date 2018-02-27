@@ -11,14 +11,20 @@ input::placeholder {
   // padding-left: $btn-size;
   height: 40px;
   width: $app-width;
+  border: solid 2px black;
   font-size: $font-size;
+  @media(max-width: $max-width) {
+    width: $small-app-width;
+  }
 }
 .input-btn {
   position: absolute;
   right: 0;
   width: $btn-size;
   height: $btn-size;
-  border: 2px solid #333;
+  background-color: rgba(0,0,0,0);
+  border-color: rgba(0, 0, 0, 0);
+  border-left: 1px solid #333;
   cursor: pointer;
 }
 #input-inside-container {
