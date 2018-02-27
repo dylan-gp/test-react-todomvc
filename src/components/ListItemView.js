@@ -12,17 +12,25 @@ export default (props) => (
         submitHandler={props.changeItemText}
         inputValue={props.item.name}
       /> :
-      <label onDoubleClick={props.dblClickHandler}>{props.item.name}</label>
-    }
-    {!props.item.complete && !props.inputBoxShow ? 
-      <button onClick={props.markComplete}>√</button> :
-      null
-    }
-    {!props.inputBoxShow ? 
-      <button onClick={props.deleteItem(props.item.id)}>X</button> :
-      null
+      <ListItemStandard
+        dblClickHandler={props.dblClickHandler}
+        item={props.item}
+        markComplete={props.markComplete}
+        deleteItem={props.deleteItem}
+      />
     }
   </li>
 );
 
+
+const ListItemStandard = (props) => (
+  <React.Fragment>
+    <label onDoubleClick={props.dblClickHandler}>{props.item.name}</label>
+    {!props.item.complete ? 
+      <button onClick={props.markComplete}>√</button> :
+      null
+    }
+    <button onClick={props.deleteItem(props.item.id)}>X</button>
+  </React.Fragment>
+);
 
