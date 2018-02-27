@@ -5,5 +5,6 @@ export default class ToDoList extends React.Component {
   render = () => 
     <ListView 
       items={this.props.items}
+      deleteItem={this.props.deleteItem}
     />;
 }

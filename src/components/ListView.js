@@ -1,13 +1,11 @@
 import React from 'react';
+import ListItem from '../containers/ListItem';
 
-export default (props) => (
+export default ({items, deleteItem}) => (
   <ul className='list-container'>
-    {props.items.map(
+    {items.map(
       item =>
-        <li className='list-item' key={item.id} >
-          <p>{item.name}</p>
-          <button>X</button>
-        </li>
+        <ListItem key={item.id} item={item} deleteItem={deleteItem}/>
     )}
   </ul>
 );

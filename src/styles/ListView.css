@@ -32,3 +32,6 @@
   visibility: 1;
   opacity: 1;
   transition: opacity 1s; }
+
+.complete {
+  background-color: rgba(0, 200, 0, 0.4); }
